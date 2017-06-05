@@ -632,7 +632,7 @@ defmodule WebSockex do
       %URI{host: host, port: port, scheme: protocol}
       when is_nil(host)
       when is_nil(port)
-      when not protocol in ["ws", "wss"] ->
+      when not protocol in ["ws", "wss", "http"] ->
         {:error, %WebSockex.URLError{url: url}}
       {:error, error} ->
         {:error, error}
